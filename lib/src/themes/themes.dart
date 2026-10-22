@@ -35,11 +35,9 @@ class Themes {
 
   static final lightTheme = ThemeData(
     fontFamily: fontFamily,
-    errorColor: errorColor,
     primaryColor: primaryColor,
     primarySwatch: Colors.orange,
     splashColor: Colors.transparent,
-    bottomAppBarColor: primaryColor,
     highlightColor: Colors.transparent,
     scaffoldBackgroundColor: lightColor,
     cupertinoOverrideTheme: NoDefaultCupertinoThemeData(
@@ -50,7 +48,8 @@ class Themes {
         primaryColor: darkColor,
       ),
     ),
-    bottomAppBarTheme: const BottomAppBarTheme(
+    // ThemeData.bottomAppBarColor was removed; the same colour is set here.
+    bottomAppBarTheme: const BottomAppBarThemeData(
       color: primaryColor,
     ),
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
@@ -64,43 +63,43 @@ class Themes {
     colorScheme:
         const ColorScheme.light(primary: primaryColor, error: errorColor),
     textTheme: const TextTheme(
-      headline1: TextStyle(
+      displayLarge: TextStyle(
         fontSize: 24,
         color: primaryColor,
         fontFamily: fontFamily,
         fontWeight: FontWeight.w500,
       ),
-      headline2: TextStyle(
+      displayMedium: TextStyle(
         fontSize: 18,
         color: darkColor,
         fontFamily: fontFamily,
         fontWeight: FontWeight.w500,
       ),
-      headline3: TextStyle(
+      displaySmall: TextStyle(
         fontSize: 16,
         color: primaryColor,
         fontFamily: fontFamily,
         fontWeight: FontWeight.w500,
       ),
-      headline4: TextStyle(
+      headlineMedium: TextStyle(
         fontSize: 14,
         color: textColor33,
         fontFamily: fontFamily,
         fontWeight: FontWeight.w500,
       ),
-      headline5: TextStyle(
+      headlineSmall: TextStyle(
         fontSize: 12,
         color: darkColor,
         fontFamily: fontFamily,
         fontWeight: FontWeight.w500,
       ),
-      headline6: TextStyle(
+      titleLarge: TextStyle(
         fontSize: 10,
         color: darkColor,
         fontFamily: fontFamily,
         fontWeight: FontWeight.w500,
       ),
-      subtitle1: TextStyle(
+      titleMedium: TextStyle(
         fontSize: 8,
         color: lightColor,
         fontFamily: fontFamily,
